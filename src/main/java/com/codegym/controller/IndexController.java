@@ -11,14 +11,14 @@ public class IndexController {
     @RequestMapping("/")
     public String get(Model model){
         //mapped to hostname:port/home/
-        model.addAttribute("message", "Home!");
+        model.addAttribute("message", "Home Page!");
         return "/home";
     }
 
     @RequestMapping("/index")
     public String index(Model model){
         //mapped to hostname:port/home/index/
-        model.addAttribute("message", "Index!");
+        model.addAttribute("message", "Index Page!");
         return "/index";
     }
 
