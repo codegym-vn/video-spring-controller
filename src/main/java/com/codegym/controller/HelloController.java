@@ -15,28 +15,31 @@ public class HelloController {
         return "/index";
     }
 
-    //http://localhost:8080/cars/shop/info
-    //http://localhost:8080/cart/show/info
-    @RequestMapping("/car?/s?o?/info")
-    public String info(Model model) {
-        model.addAttribute("message", "Infor");
+    //http://localhost:8080/cars/shop/info1
+    //http://localhost:8080/cart/show/info1
+    @RequestMapping("/car?/s?o?/info1")
+    public String info1(Model model) {
+        model.addAttribute("message", "Infor1");
         return "/index";
     }
 
-    //http://localhost:8080/cars/speed/info
-    //http://localhost:8080/cabbie/signalized/info
-    @RequestMapping("/c*/s*d/info")
-    public ModelAndView info() {
+    //http://localhost:8080/cars/speed/info2
+    //http://localhost:8080/cabbie/signalized/info2
+    @RequestMapping("/c*/s*d/info2")
+    public ModelAndView info2() {
         ModelAndView model = new ModelAndView("/index");
-        model.addObject("message", "Infor");
+        model.addObject("message", "Infor2");
         return model;
     }
 
-    /*@RequestMapping("/card/**")
-    public ModelAndView () {
+    //http://localhost:8080/card
+    //http://localhost:8080/card/about
+    //http://localhost:8080/card/visa/registration
+    @RequestMapping("/card/**")
+    public ModelAndView info3() {
         ModelAndView model = new ModelAndView("/index");
-        model.addObject("message", "Infor");
+        model.addObject("message", "Infor3");
         return model;
-    }*/
+    }
 
 }
