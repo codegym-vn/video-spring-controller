@@ -6,6 +6,8 @@
 
 </head>
 <body>
-<h1 th:text="${message}"></h1>
+<h1>Index Page</h1>
+<div th:insert="~{/fragments/my-template :: my-fragment1}"></div>
+<div th:insert="~{/fragments/my-template :: my-fragment2}"></div>
 </body>
 </html>

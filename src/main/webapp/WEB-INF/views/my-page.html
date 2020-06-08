@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+
+    <!--selector html tag name-->
+    <title th:replace = "~{/fragments/my-template :: title}">Title</title>
+
+
+    <th:block th:insert="~{/fragments/my-template :: link}"></th:block>
+
+    <th:block th:insert="~{/fragments/my-template :: head/script}"></th:block>
+
+</head>
+<body>
+
+
+<h1>My Page</h1>
+
+<p>Some Content of My Page</p>
+
+<!--selector fragment name-->
+<div th:insert="~{/fragments/my-template :: my-fragment1}"></div>
+
+<div th:insert="~{/fragments/my-template :: my-fragment2}"></div>
+
+<!--selector id-->
+<div th:insert="~{/fragments/my-template :: #my-id1}"></div>
+
+<!--selector class-->
+<div th:insert="~{/fragments/my-template :: p.my-class }"></div>
+
+<!-- Fragment with explicit parameters. -->
+<div th:replace="~{/fragments/my-template :: person('Donald', 'Trump') }"></div>
+
+<div th:replace="~{/fragments/my-template :: person( firstName='Donald', lastName= 'Trump') }"></div>
+
+<!-- Fragment with implicit parameters. -->
+<div th:replace="~{/fragments/my-template :: person(firstName='Doan Van', lastName = 'Hau') }"></div>
+
+
+</body>
+</html>
